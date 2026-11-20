@@ -28,7 +28,7 @@ jobs:
         run: |
           pyinstaller --noconfirm --onefile --windowed `
             --collect-all mediapipe `
-            --collect-all cv2  --add-data "model.joblib" `
+            --collect-all cv2  --add-data "model.joblib":"model.joblib" `
             main.py
 
       - name: Upload Windows EXE
